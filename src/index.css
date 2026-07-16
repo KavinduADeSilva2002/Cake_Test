@@ -475,9 +475,126 @@ a {
   white-space: nowrap;
 }
 
-/* Responsive utilities */
+/* Responsive utilities & Mobile Adjustments */
+@media (max-width: 1024px) {
+  h1 {
+    font-size: 2.75rem !important;
+  }
+  h2 {
+    font-size: 2rem !important;
+  }
+}
+
 @media (max-width: 768px) {
   .container {
     padding: 0 16px;
+  }
+  
+  h1 {
+    font-size: 2.25rem !important;
+  }
+  
+  h2 {
+    font-size: 1.75rem !important;
+  }
+
+  .btn {
+    padding: 10px 22px;
+    font-size: 0.9rem;
+  }
+  
+  /* Stack grid layouts */
+  .grid-two-columns, .responsive-grid, .form-grid {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+  
+  /* Hero Image styling */
+  .hero-img-responsive {
+    max-width: 290px !important;
+    height: auto !important;
+    aspect-ratio: 360/420;
+    margin: 0 auto;
+  }
+  
+  /* Cake builder live preview responsive */
+  .tier-visualizer {
+    height: 280px !important;
+    padding: 12px !important;
+  }
+  
+  .cake-stand {
+    width: 180px !important;
+  }
+  
+  .cake-stand-base {
+    width: 60px !important;
+  }
+  
+  .cake-tier {
+    height: 50px !important;
+  }
+  
+  .topping-cherry {
+    top: -10px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 12px;
+  }
+
+  h1 {
+    font-size: 1.95rem !important;
+  }
+  
+  /* Adjust visualizer builder buttons to prevent wrap issues */
+  .builder-tab-btn {
+    padding: 6px 8px !important;
+    font-size: 0.8rem !important;
+  }
+
+  /* Hide "Cart" text label in navbar on very small screens — show only icon + count */
+  .cart-toggle-btn span:first-of-type {
+    display: none !important;
+  }
+
+  /* Reduce hero section vertical padding on mobile */
+  .hero-section {
+    padding: 48px 0 60px !important;
+  }
+
+  /* Make modal image constrained height in stacked layout */
+  .modal-image {
+    height: 200px !important;
+    border-top-left-radius: var(--radius-lg) !important;
+    border-top-right-radius: var(--radius-lg) !important;
+    border-bottom-left-radius: 0 !important;
+  }
+
+  /* Compact footer on very small screens */
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Hide Cart text label on small mobile — icon + count badge is enough */
+  .cart-toggle-btn span:first-of-type {
+    display: none;
+  }
+
+  /* Reduce hero vertical padding */
+  .hero-section {
+    padding: 56px 0 70px !important;
+  }
+
+  /* Modal image in stacked mode */
+  .modal-image {
+    height: 240px !important;
+    border-top-right-radius: var(--radius-lg) !important;
+    border-bottom-left-radius: 0 !important;
   }
 }

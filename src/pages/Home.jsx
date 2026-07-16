@@ -29,7 +29,7 @@ export default function Home({ setCurrentPage, onSelectCake }) {
     <div className="animate-fade-in">
       
       {/* 1. HERO SECTION */}
-      <section style={{
+      <section className="hero-section" style={{
         position: 'relative',
         padding: '80px 0 100px',
         background: 'radial-gradient(circle at 80% 20%, var(--primary-alpha) 0%, transparent 60%)',
@@ -66,7 +66,7 @@ export default function Home({ setCurrentPage, onSelectCake }) {
             }}>
               Bespoke luxury cakes crafted with organic ingredients, delicate textures, and stunning custom designs. Delivered fresh to your doorstep in New York.
             </p>
-            <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
+            <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
               <button 
                 onClick={() => setCurrentPage('menu')}
                 className="btn btn-primary"
@@ -98,13 +98,15 @@ export default function Home({ setCurrentPage, onSelectCake }) {
             }} />
             
             {/* Real Cake Image with float animation */}
-            <div className="float-img" style={{ zIndex: 2, position: 'relative' }}>
+            <div className="float-img" style={{ zIndex: 2, position: 'relative', width: '100%', display: 'flex', justifyContent: 'center' }}>
               <img 
-                src="https://images.unsplash.com/photo-1535141192574-5d4897c13636?auto=format&fit=crop&q=80&w=800" 
+                src="https://images.unsplash.com/photo-1588195538326-c5b1e9f80a1b?auto=format&fit=crop&q=80&w=800" 
                 alt="Signature Strawberry Luxury Cake" 
                 style={{
-                  width: '360px',
-                  height: '420px',
+                  width: '100%',
+                  maxWidth: '360px',
+                  height: 'auto',
+                  aspectRatio: '360/420',
                   borderRadius: 'var(--radius-lg) var(--radius-lg) 200px 200px',
                   objectFit: 'cover',
                   border: '8px solid var(--bg-card)',
@@ -234,7 +236,7 @@ export default function Home({ setCurrentPage, onSelectCake }) {
 
           <div style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
             gap: '32px'
           }}>
             {bestSellers.map(cake => (
@@ -323,9 +325,9 @@ export default function Home({ setCurrentPage, onSelectCake }) {
             background: 'linear-gradient(135deg, rgba(255, 107, 139, 0.1) 0%, rgba(220, 162, 99, 0.1) 100%)',
             border: '1px solid var(--border-color)',
             borderRadius: 'var(--radius-lg)',
-            padding: '60px 48px',
+            padding: 'clamp(24px, 5vw, 60px) clamp(16px, 4vw, 48px)',
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
             gap: '40px',
             alignItems: 'center'
           }}>

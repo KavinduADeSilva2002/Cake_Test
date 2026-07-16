@@ -193,7 +193,7 @@ export default function Footer({ setCurrentPage }) {
         }} />
 
         {/* Bottom copyright */}
-        <div style={{
+        <div className="footer-bottom" style={{
           display: 'flex',
           justifyContent: 'space-between',
           alignItems: 'center',

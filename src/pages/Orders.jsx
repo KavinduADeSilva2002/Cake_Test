@@ -301,7 +301,7 @@ export default function Orders({ cart, clearCart, setCurrentPage }) {
               </div>
 
               {/* Email & Phone grid */}
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px', '@media (max-width: 500px)': { gridTemplateColumns: '1fr' } }} className="form-grid">
+              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }} className="form-grid">
                 <div className="form-group">
                   <label className="form-label" htmlFor="email">Email Address</label>
                   <input 
@@ -376,7 +376,7 @@ export default function Orders({ cart, clearCart, setCurrentPage }) {
               )}
 
               {/* Date & Time slot */}
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }} className="form-grid">
                 <div className="form-group">
                   <label className="form-label" htmlFor="deliveryDate">Requested Date</label>
                   <input 

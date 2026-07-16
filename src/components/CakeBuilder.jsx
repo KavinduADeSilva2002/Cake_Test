@@ -94,7 +94,7 @@ export default function CakeBuilder({ onAddToCart }) {
       category: 'Custom',
       price: calculatedPrice,
       description: description,
-      image: 'https://images.unsplash.com/photo-1535141192574-5d4897c13636?auto=format&fit=crop&q=80&w=400',
+      image: 'https://images.unsplash.com/photo-1588195538326-c5b1e9f80a1b?auto=format&fit=crop&q=80&w=400',
       quantity: 1,
       selectedSize: `${tiers}-Tier Design`,
       customText: cakeText
@@ -320,6 +320,7 @@ export default function CakeBuilder({ onAddToCart }) {
               {['Layers & Flavors', 'Toppings', 'Personalize'].map((tab, idx) => (
                 <button
                   key={tab}
+                  className="builder-tab-btn"
                   onClick={() => setActiveTab(idx + 1)}
                   style={{
                     background: 'none',
@@ -331,7 +332,8 @@ export default function CakeBuilder({ onAddToCart }) {
                     cursor: 'pointer',
                     fontSize: '0.9rem',
                     transition: 'all var(--transition-fast)',
-                    fontFamily: 'var(--font-sans)'
+                    fontFamily: 'var(--font-sans)',
+                    whiteSpace: 'nowrap'
                   }}
                 >
                   {tab}
