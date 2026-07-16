@@ -1,0 +1,6 @@
+/* App-specific styling overrides if needed, using variables from index.css */
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
