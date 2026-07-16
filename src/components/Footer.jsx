@@ -171,15 +171,15 @@ export default function Footer({ setCurrentPage }) {
             }}>
               <li style={{ display: 'flex', alignItems: 'flex-start', gap: '8px' }}>
                 <MapPin size={16} style={{ color: 'var(--primary)', marginTop: '3px', flexShrink: 0 }} />
-                <span>45 Cake Boulevard, Pastry District, NY 10013</span>
+                <span>No:223/19,Subodharama road,Dehiwala</span>
               </li>
               <li style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                 <Phone size={16} style={{ color: 'var(--primary)' }} />
-                <a href="tel:+15550199" style={{ transition: 'color var(--transition-fast)' }} onMouseEnter={e => e.target.style.color = 'var(--primary)'} onMouseLeave={e => e.target.style.color = 'inherit'}>+1 (555) 019-9000</a>
+                <a href="tel:+15550199" style={{ transition: 'color var(--transition-fast)' }} onMouseEnter={e => e.target.style.color = 'var(--primary)'} onMouseLeave={e => e.target.style.color = 'inherit'}>0702722544566</a>
               </li>
               <li style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                 <Mail size={16} style={{ color: 'var(--primary)' }} />
-                <a href="mailto:kavinduanjana35@gmail.com" style={{ transition: 'color var(--transition-fast)' }} onMouseEnter={e => e.target.style.color = 'var(--primary)'} onMouseLeave={e => e.target.style.color = 'inherit'}>kavinduanjana35@gmail.com</a>
+                <a href="mailto:kavinduanjana35@gmail.com" style={{ transition: 'color var(--transition-fast)' }} onMouseEnter={e => e.target.style.color = 'var(--primary)'} onMouseLeave={e => e.target.style.color = 'inherit'}>kavinduanjana35888@gmail.com</a>
               </li>
             </ul>
           </div>

@@ -29,13 +29,13 @@ export default function Contact() {
 
     // Trigger email client
     const mailtoLink = `mailto:${targetEmail}?subject=${encodeURIComponent(subjectLine)}&body=${encodeURIComponent(bodyContent)}`;
-    
+
     // Simulate submission success and trigger client
     setTimeout(() => {
       window.location.href = mailtoLink;
       setIsSubmitting(false);
       setSuccess(true);
-      
+
       confetti({
         particleCount: 50,
         spread: 60,
@@ -46,7 +46,7 @@ export default function Contact() {
 
   return (
     <div className="container animate-fade-in" style={{ padding: '60px 24px' }}>
-      
+
       {/* Title */}
       <div style={{ textAlign: 'center', marginBottom: '56px' }}>
         <span className="badge" style={{ marginBottom: '12px' }}>Get In Touch</span>
@@ -62,10 +62,10 @@ export default function Contact() {
         gap: '40px',
         alignItems: 'start'
       }}>
-        
+
         {/* Left Column: Form / Info */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: '30px' }}>
-          
+
           {/* Contact Details Panel */}
           <div className="glass-panel" style={{ padding: '30px', background: 'var(--bg-card)' }}>
             <h3 style={{ fontSize: '1.35rem', marginBottom: '24px', fontFamily: 'var(--font-sans)', fontWeight: '700' }}>
@@ -73,7 +73,7 @@ export default function Contact() {
             </h3>
 
             <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
-              
+
               {/* Address */}
               <div style={{ display: 'flex', gap: '16px', alignItems: 'flex-start' }}>
                 <div style={{
@@ -84,7 +84,7 @@ export default function Contact() {
                 <div>
                   <div style={{ fontWeight: 'bold', fontSize: '0.95rem' }}>Visit Our Boutique</div>
                   <div style={{ color: 'var(--text-secondary)', fontSize: '0.85rem', marginTop: '4px', lineHeight: 1.5 }}>
-                    45 Cake Boulevard, Pastry District, New York, NY 10013
+                    No:223/19,Subodharama road,Dehiwala
                   </div>
                 </div>
               </div>
@@ -99,7 +99,7 @@ export default function Contact() {
                 <div>
                   <div style={{ fontWeight: 'bold', fontSize: '0.95rem' }}>Direct Line</div>
                   <div style={{ color: 'var(--text-secondary)', fontSize: '0.85rem', marginTop: '4px' }}>
-                    <a href="tel:+15550199000" style={{ transition: 'color var(--transition-fast)' }} onMouseEnter={e => e.target.style.color = 'var(--primary)'} onMouseLeave={e => e.target.style.color = 'inherit'}>+1 (555) 019-9000</a>
+                    <a href="tel:+15550199000" style={{ transition: 'color var(--transition-fast)' }} onMouseEnter={e => e.target.style.color = 'var(--primary)'} onMouseLeave={e => e.target.style.color = 'inherit'}>070276554444333</a>
                   </div>
                 </div>
               </div>
@@ -114,7 +114,7 @@ export default function Contact() {
                 <div>
                   <div style={{ fontWeight: 'bold', fontSize: '0.95rem' }}>Bakehouse Email</div>
                   <div style={{ color: 'var(--text-secondary)', fontSize: '0.85rem', marginTop: '4px' }}>
-                    <a href="mailto:kavinduanjana35@gmail.com" style={{ transition: 'color var(--transition-fast)' }} onMouseEnter={e => e.target.style.color = 'var(--primary)'} onMouseLeave={e => e.target.style.color = 'inherit'}>kavinduanjana35@gmail.com</a>
+                    <a href="mailto:kavinduanjana35@gmail.com" style={{ transition: 'color var(--transition-fast)' }} onMouseEnter={e => e.target.style.color = 'var(--primary)'} onMouseLeave={e => e.target.style.color = 'inherit'}>kavinduanjana3578@gmail.com</a>
                   </div>
                 </div>
               </div>
@@ -150,11 +150,11 @@ export default function Contact() {
               backgroundImage: 'linear-gradient(#ccc 1px, transparent 1px), linear-gradient(90deg, #ccc 1px, transparent 1px)',
               backgroundSize: '24px 24px'
             }} />
-            
+
             {/* Mock Roads */}
             <div style={{ position: 'absolute', top: '110px', left: 0, width: '100%', height: '20px', background: 'var(--border-color)' }} />
             <div style={{ position: 'absolute', left: '160px', top: 0, width: '20px', height: '100%', background: 'var(--border-color)' }} />
-            
+
             {/* Central Park representation */}
             <div style={{
               position: 'absolute', top: '20px', left: '20px', width: '100px', height: '60px',
@@ -183,7 +183,7 @@ export default function Contact() {
                 Sweet Symphony
               </div>
             </div>
-            
+
             <div style={{
               position: 'absolute', bottom: '12px', right: '12px', background: 'var(--bg-modal)',
               padding: '4px 10px', borderRadius: 'var(--radius-full)', border: '1px solid var(--border-color)',
@@ -209,7 +209,7 @@ export default function Contact() {
               <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', lineHeight: 1.5, marginBottom: '24px' }}>
                 Your inquiry has been compiled. Please send the pre-addressed email that just opened in your browser/email app.
               </p>
-              <button 
+              <button
                 onClick={() => setSuccess(false)}
                 className="btn btn-outline"
                 style={{ padding: '8px 20px', fontSize: '0.85rem' }}
@@ -222,13 +222,13 @@ export default function Contact() {
               <h3 style={{ fontSize: '1.35rem', marginBottom: '24px', fontFamily: 'var(--font-sans)', fontWeight: '700' }}>
                 Send Feedback
               </h3>
-              
+
               <form onSubmit={handleSubmit}>
                 {/* Name */}
                 <div className="form-group">
                   <label className="form-label" htmlFor="contact-name">Your Name</label>
-                  <input 
-                    type="text" 
+                  <input
+                    type="text"
                     id="contact-name"
                     name="name"
                     className="form-input"
@@ -242,8 +242,8 @@ export default function Contact() {
                 {/* Email */}
                 <div className="form-group">
                   <label className="form-label" htmlFor="contact-email">Email Address</label>
-                  <input 
-                    type="email" 
+                  <input
+                    type="email"
                     id="contact-email"
                     name="email"
                     className="form-input"
@@ -257,7 +257,7 @@ export default function Contact() {
                 {/* Subject Selector */}
                 <div className="form-group">
                   <label className="form-label" htmlFor="contact-subject">Inquiry Subject</label>
-                  <select 
+                  <select
                     id="contact-subject"
                     name="subject"
                     className="form-select"
@@ -275,7 +275,7 @@ export default function Contact() {
                 {/* Message */}
                 <div className="form-group">
                   <label className="form-label" htmlFor="contact-message">Message Details</label>
-                  <textarea 
+                  <textarea
                     id="contact-message"
                     name="message"
                     className="form-textarea"
@@ -288,8 +288,8 @@ export default function Contact() {
                 </div>
 
                 {/* Submit button */}
-                <button 
-                  type="submit" 
+                <button
+                  type="submit"
                   className="btn btn-primary"
                   disabled={isSubmitting}
                   style={{ width: '100%', gap: '10px', marginTop: '8px' }}
